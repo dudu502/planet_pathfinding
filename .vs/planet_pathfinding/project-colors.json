@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c3126d78-ae53-357d-4025-2f93f2fafee2": {
+      "ProjectGuid": "c3126d78-ae53-357d-4025-2f93f2fafee2",
+      "DisplayName": "Assembly-CSharp",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "杂项文件",
+      "ColorIndex": -1
+    },
+    "edfa4c87-be17-c081-e9e6-1bddf01fb069": {
+      "ProjectGuid": "edfa4c87-be17-c081-e9e6-1bddf01fb069",
+      "DisplayName": "Assembly-CSharp-Editor",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
