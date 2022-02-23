@@ -112,7 +112,7 @@ public class Tile : MonoBehaviour, IHeapItem<Tile>
 	void Awake()
 	{
 		tileRenderer = GetComponent<Renderer>(); 
-		Nav.Position = transform.position;
+		Nav.Position = transform.position / parentPlanet.planetScale;
 	}
 	
 	public void Initialize()
