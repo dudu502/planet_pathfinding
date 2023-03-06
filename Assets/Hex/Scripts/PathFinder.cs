@@ -49,11 +49,11 @@ public class PathFinder
             {
                 if (!tile.navigable || closeSet.Contains(tile))
                     continue;
-                float g = current.Nav.g + Mathf.Acos(Vector3.Dot(current.Nav.Position-m_HexspherePosition,tile.Nav.Position-m_HexspherePosition));
+                int g = (int)(current.Nav.g + Mathf.Rad2Deg * Mathf.Acos(Vector3.Dot(current.Nav.Position-m_HexspherePosition,tile.Nav.Position-m_HexspherePosition)));
                 if (g<tile.Nav.g||!openList.Contains(tile))
                 {
                     tile.Nav.g = g;
-                    tile.Nav.h = Mathf.Acos(Vector3.Dot(tile.Nav.Position-m_HexspherePosition,end.Nav.Position-m_HexspherePosition));
+                    tile.Nav.h = (int)(Mathf.Rad2Deg * Mathf.Acos(Vector3.Dot(tile.Nav.Position-m_HexspherePosition,end.Nav.Position-m_HexspherePosition)));
                     tile.Nav.LastTile = current;
                     if (!openList.Contains(tile))
                         openList.Add(tile);

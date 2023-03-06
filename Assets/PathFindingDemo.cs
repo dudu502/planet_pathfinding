@@ -73,9 +73,7 @@ public class PathFindingDemo:MonoBehaviour
                 {
                     Tile next = tail;
                     if (i + 1 < list.Count)
-                    {
                         next = list[i + 1];
-                    }
                     Tile current = list[i];
                     pointList.Add(ExpandSize((next.FaceCenter + current.FaceCenter) / 2));
                 }
@@ -90,15 +88,15 @@ public class PathFindingDemo:MonoBehaviour
     }
     void ResetPathFinding()
     {
+        m_CostTimeMs = 0;
+        m_CurrentSelectTile = null;
+        m_StartTile = null;
+        m_EndTile = null;
         m_Planet.tiles.ForEach(t =>
         {
             t.navigable = true;
-            t.Nav.Clear();
-            m_CostTimeMs = 0;
-            t.GetComponent<MeshRenderer>().sharedMaterial = m_DefaultMat;
-            m_CurrentSelectTile = null;
-            m_StartTile = null;
-            m_EndTile = null;
+            t.Nav.Clear();          
+            t.GetComponent<MeshRenderer>().sharedMaterial = m_DefaultMat;          
         });
     }
     private void Update()
@@ -142,7 +140,5 @@ public class PathFindingDemo:MonoBehaviour
             }
         }
     }
-
-
 }
 

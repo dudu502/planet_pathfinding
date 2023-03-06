@@ -24,7 +24,7 @@ public class Tile : MonoBehaviour, IHeapItem<Tile>
 	}
 	public class NavData
 	{
-		public float h,g,f;
+		public int h,g,f;
 		public Tile LastTile;
 		public Vector3 Position;
 
